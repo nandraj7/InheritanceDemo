@@ -1,13 +1,30 @@
 ﻿
 using InheritanceDemo;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
     public static void Main()
     {
+        Teacher teacher = new Teacher();
+    
+        teacher.GateData();
+        teacher.Putdata();
+
+
+
+
+
+
+
 
         Child C = new Child();
-        Parent P = new Parent();
+
+        string Operation = "Add";
+
+        C.Function4(10, 20, Operation); //Actual paramters
+
+        Parent P = new Parent(10);
 
         Child c1;
         Parent p1;
@@ -29,6 +46,6 @@ class Program
             //Child C2 = new Child();     //Instance Of The Class
 
            // Child C3;       //Variable Of The Class
-           // C3 = C2;       //Referance Of The Class
+           //C3 = C2;       //Referance Of The Class
     }
 }
